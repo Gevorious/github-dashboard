@@ -1,3 +1,3 @@
 export type UserPageProps = {
-  params: { username: string };
+  params: Promise<{ username: string }>;
 };
