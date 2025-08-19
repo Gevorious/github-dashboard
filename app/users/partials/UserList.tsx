@@ -35,8 +35,6 @@ const UserList = () => {
   if (!filtered.length)
     return <p className="text-center py-4 text-gray-500">No user found</p>;
 
-  console.log(users);
-
   return (
     <div className="max-w-3xl mx-auto mt-6">
       <InfiniteScroll
