@@ -15,9 +15,7 @@ const UserList = () => {
     useInfiniteQuery({
       queryKey: ['users'],
       queryFn: ({ pageParam = 0 }) =>
-        request<User[]>(
-          `https://api.github.com/users?per_page=20&since=${pageParam}`,
-        ),
+        request<User[]>(`/users?per_page=20&since=${pageParam}`),
       getNextPageParam: (lastPage) =>
         lastPage.length ? lastPage[lastPage.length - 1].id : undefined,
       initialPageParam: 0,

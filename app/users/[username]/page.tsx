@@ -6,7 +6,7 @@ import { UserPageProps } from './types';
 
 const UserPage = async ({ params }: UserPageProps) => {
   const { username } = await params;
-  const user = await request<User>(`https://api.github.com/users/${username}`);
+  const user = await request<User>(`/users/${username}`);
 
   return (
     <div className="max-w-3xl mx-auto mt-8 bg-white shadow-md rounded-lg overflow-hidden">
