@@ -24,7 +24,6 @@ export const useRecentStore = create<RecentState>((set) => ({
   setRecent: (users) => set({ recent: users }),
 }));
 
-// helper hook to load from localStorage on client
 export const useLoadRecentFromStorage = () => {
   const setRecent = useRecentStore((state) => state.setRecent);
   useEffect(() => {
